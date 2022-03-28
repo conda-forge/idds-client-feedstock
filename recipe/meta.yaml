@@ -1,5 +1,5 @@
 {% set name = "idds-client" %}
-{% set version = "0.10.4" %}
+{% set version = "0.10.5" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f7e1d2a703db2ca7800bec78b6ffc01bb1f15899d9b96256b28d125510986896
+  sha256: 9b59e9bc654467d058a21d727ff03145c4de31676a569ebb0fecc68b06ecc512
 
 build:
   number: 0
