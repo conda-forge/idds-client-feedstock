@@ -28,7 +28,6 @@ requirements:
     - stomp.py
     - tabulate
     - urllib3
-    - futures
     - argcomplete
 
 test:
