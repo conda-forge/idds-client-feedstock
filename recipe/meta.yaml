@@ -20,12 +20,10 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - flask
     - idds-common =={{ version }}
     - idds-workflow =={{ version }}
     - python >=3.6
     - requests
-    - stomp.py
     - tabulate
     - urllib3
     - argcomplete
