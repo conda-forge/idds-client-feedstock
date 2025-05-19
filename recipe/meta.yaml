@@ -8,28 +8,30 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name_pypi }}/{{ name_pypi }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name_pypi }}/{{ name_pypi }}-{{ version }}.tar.gz
   sha256: 5044660cabef16c3f48b705beb3fffda8e76dac5b215fe673cddf2a5db1ed856
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - idds-common =={{ version }}
     - idds-workflow =={{ version }}
-    - python >=3.6
+    - python >={{ python_min }}
     - requests
     - tabulate
     - urllib3
     - argcomplete
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - idds
     - idds.client
